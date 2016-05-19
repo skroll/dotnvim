@@ -6,8 +6,8 @@ Heavily inspired by [bling's dotvim][blingdotvim].
 ## installation
 
 1.  clone this repository into your `~/.nvim` directory
-1.  `mv ~/.vimrc ~/.vimrc.backup`
-1.  create the following shim and save it as `~/.vimrc`:
+1.  `mv ~/.config/nvim/init.vim ~/.config/nvim/init.vim`
+1.  create the following shim and save it as `~/.config/nvim/init.vim`:
 
 ```
 let g:dotvim_settings = {}
