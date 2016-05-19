@@ -37,6 +37,7 @@
     let s:settings.plugin_groups = []
     call add(s:settings.plugin_groups, 'core')
     call add(s:settings.plugin_groups, 'go')
+    call add(s:settings.plugin_groups, 'rust')
     call add(s:settings.plugin_groups, 'scm')
     call add(s:settings.plugin_groups, 'navigation')
     call add(s:settings.plugin_groups, 'unite')
@@ -261,6 +262,9 @@
   if count(s:settings.plugin_groups, 'go') " {{{
     Plug 'fatih/vim-go'
   endif " }}}
+  if count(s:settings.plugin_groups, 'rust') " {{{
+    Plug 'rust-lang/rust.vim'
+  endif " }}}
   if count(s:settings.plugin_groups, 'scm') " {{{
     Plug 'tpope/vim-fugitive' " {{{
       nnoremap <silent> <leader>gs :Gstatus<CR>
@@ -349,7 +353,7 @@
     " }}}
   endif " }}}
   if count(s:settings.plugin_groups, 'autocomplete') " {{{
-    Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --gocode-completer' } " {{{
+    Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --gocode-completer --racer-completer' } " {{{
       let g:ycm_complete_in_comments_and_strings=1
       let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
       let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
